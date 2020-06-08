@@ -24,6 +24,7 @@ class PostsController < ApplicationController
 	end
 
 	def update
-    @post.update(params.require(:post).permit(:title, :description))
+	  @post.update(title: params[:title], description: params[:description])
+#    @post.update(params.require(:post).permit(:title, :description))
 	end
 end
